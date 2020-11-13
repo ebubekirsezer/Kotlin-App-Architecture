@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.detail.DetailFragment">
+
+    <ProgressBar
+        android:id="@+id/detail_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/detail_character_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/title_style"/>
+    <TextView
+        android:id="@+id/detail_character_birthyear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/detail_style"/>
+    <TextView
+        android:id="@+id/detail_character_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/detail_style"/>
+    <TextView
+        android:id="@+id/detail_character_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/detail_style"/>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ess.mvvmsample.viewmodel.DetailViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".view.DetailFragment">
+
+        <ProgressBar
+            android:id="@+id/detail_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.isLoading()}"/>
+        <TextView
+            android:id="@+id/detail_character_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.character.name}"
+            style="@style/title_style"/>
+        <TextView
+            android:id="@+id/detail_character_birthyear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.character.birth_year}"
+            style="@style/detail_style"/>
+        <TextView
+            android:id="@+id/detail_character_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.character.gender}"
+            style="@style/detail_style"/>
+        <TextView
+            android:id="@+id/detail_character_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.character.height}"
+            style="@style/detail_style"/>
+
+    </LinearLayout>
+</layout>

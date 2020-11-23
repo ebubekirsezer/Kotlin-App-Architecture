@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="character"
+            type="com.ess.mvvmsample.data.model.StarWarsCharacter" />
+
+        <variable
+            name="clickListener"
+            type="com.ess.mvvmsample.adapters.CharacterClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/small_padding"
+        android:onClick="@{() -> clickListener.onClick(character)}">
+
+        <TextView
+            android:id="@+id/character_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@{character.name}"
+            style="@style/title_style" />
+
+        <TextView
+            android:id="@+id/character_birth_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@{character.birth_year}"
+            style="@style/detail_style" />
+
+    </LinearLayout>
+</layout>
